@@ -1,27 +1,17 @@
 # Ngv16Reproduction
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
+```sh
+npm i
+ng serve
+```
 
-## Development server
+you'll see:
+<img width="1649" alt="CleanShot 2023-07-25 at 13 33 07@2x" src="https://github.com/sod/ng16-issue-throwing-syntax/assets/905328/73276ba9-edb8-421b-b48f-1ffc05e1bf4d">
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+And the watcher won't recover.
 
-## Code scaffolding
+Issue caused by this typescript code:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```ts
+function foo(): {[foo: number] {}
+```
