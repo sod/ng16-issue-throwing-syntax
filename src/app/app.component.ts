@@ -8,3 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ngv16-reproduction';
 }
+
+function foo(): {[foo: number] {}
